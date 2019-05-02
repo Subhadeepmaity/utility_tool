@@ -86,3 +86,37 @@ if __name__ == '__main__':
 	minutes, seconds = divmod(remainder, 60)
 	logging.info("Time elapsed : %02d:%02d:%02d" % (hours, minutes, seconds))
 	print("Done..!!")
+
+# import youtube_dl
+# import logging
+# #    import urllib
+# #import shutil
+# ydl_opts = {}
+# youtube_links = 'links_for_youtube.txt'
+# try:
+# 	with open(youtube_links) as fp_links:
+# 		for cnt, link in enumerate(fp_links):
+# 			logging.info("{0}. Link : {1}".format(cnt+1, link))
+# 			try:
+# 				with youtube_dl.YoutubeDL(link) as ydl:
+# 					logger.info("Downloading from {url}".format(url=link))
+# 					ydl.download([link])
+# 			except Exception as ex:
+# 				logging.exception(
+# 			        "Exceptions while downloading the link [{0}]".format(link),
+# 			        extra={"error_message": ex.message}
+# 			    )
+# 				raise
+# except (IOError, EOFError) as ex:
+#     logging.exception(
+#         "File [{0}] Error.".format(youtube_links),
+#         extra={"error_message": ex.message}
+#     )
+#     raise
+
+# except Exception as ex:
+#     logging.exception(
+#         "Exceptions while handling File [{0}]".format(youtube_links),
+#         extra={"error_message": ex.message}
+#     )
+#     raise
