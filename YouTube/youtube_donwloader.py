@@ -15,7 +15,7 @@ def youtube_downloader(link, write_directory):
 	try:
 		pf_obj_vd = pafy.new(link)
 		
-		logging.info("\t============================================================")
+		logging.info("\t============================================================\n")
 		logging.info("\tVideo Title: {0}".format(pf_obj_vd.title))
 		logging.info("\tVideo Duration : {0}".format(pf_obj_vd.duration))
 
@@ -28,7 +28,7 @@ def youtube_downloader(link, write_directory):
 		vid.download(filepath=write_directory,callback=youtube_log)
 
 		logging.info("\n\tDownload completed.")
-		logging.info("\t============================================================")
+		logging.info("\t============================================================\n")
 
 	except Exception as ex:
 		logging.exception(
